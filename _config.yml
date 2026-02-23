@@ -1,0 +1,32 @@
+title: 쏘자 기술노트
+description: 알고리즘, 디버깅, 개발 생산성에 대한 기술 메모를 기록합니다.
+url: "https://ssjjaa-algo.github.io"
+baseurl: ""
+lang: ko
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+timezone: Asia/Seoul
+
+theme_mode_default: light
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+collections:
+  posts:
+    output: true
