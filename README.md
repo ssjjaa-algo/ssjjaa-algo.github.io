@@ -5,11 +5,18 @@ Minimal Jekyll blog for technical notes with categories, tags, RSS, dark mode, a
 ## Local development
 
 ```bash
+./scripts/jekyll-doctor.sh
 bundle install
 bundle exec jekyll serve
 ```
 
 Open `http://127.0.0.1:4000`.
+
+### Troubleshooting
+
+If `bundle exec jekyll ...` fails with `command not found: jekyll`, it usually means the gems were not installed.
+
+In restricted environments where `https://rubygems.org` is blocked (for example proxy returns HTTP 403), `bundle install` cannot download Jekyll gems. In that case use `./scripts/jekyll-doctor.sh` to confirm the network issue, then run local build in a network that can reach RubyGems or rely on the GitHub Pages workflow for deployment.
 
 ## File tree
 
