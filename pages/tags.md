@@ -1,10 +1,10 @@
 ---
-title: Tags
+title: 태그
 permalink: /pages/tags.html
 ---
 
 <div class="page">
-  <h1>Tags</h1>
+  <h1>태그</h1>
   {% assign sorted_tags = site.tags | sort %}
   {% for tag in sorted_tags %}
     <section>
@@ -13,7 +13,7 @@ permalink: /pages/tags.html
         {% for post in tag[1] %}
           <li>
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            <span class="meta">({{ post.date | date: "%Y-%m-%d" }})</span>
+            <span class="meta">({{ post.date | date: "%Y.%m.%d" }})</span>
           </li>
         {% endfor %}
       </ul>
