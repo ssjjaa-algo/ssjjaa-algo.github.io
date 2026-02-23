@@ -1,12 +1,12 @@
-title: SSJJAA Tech Notes
-description: Technical notes on algorithms, engineering, and debugging.
-url: "https://ssjjaa.github.io"
+title: SSJJAA 기술 노트
+description: 알고리즘, 엔지니어링, 디버깅 경험을 정리하는 기술 노트입니다.
+url: "https://ssjjaa-algo.github.io"
 baseurl: ""
-lang: en
+lang: ko
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:year/:month/:day/:title/
-timezone: UTC
+timezone: Asia/Seoul
 
 theme_mode_default: light
 
