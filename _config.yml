@@ -1,0 +1,32 @@
+title: SSJJAA Tech Notes
+description: Technical notes on algorithms, engineering, and debugging.
+url: "https://ssjjaa.github.io"
+baseurl: ""
+lang: en
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+timezone: UTC
+
+theme_mode_default: light
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+collections:
+  posts:
+    output: true
