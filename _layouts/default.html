@@ -10,11 +10,15 @@
   </head>
   <body>
     {% include header.html %}
-    <main class="container">
-      {{ content }}
-    </main>
+    <div class="docs-shell container">
+      {% include sidebar.html %}
+      <main class="content-area">
+        {{ content }}
+      </main>
+    </div>
     {% include footer.html %}
     <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/docs.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
   </body>
 </html>
