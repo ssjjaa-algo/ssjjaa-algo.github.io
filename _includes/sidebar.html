@@ -1,0 +1,26 @@
+<aside class="docs-sidebar" aria-label="문서 탐색">
+  <div class="docs-sidebar-inner">
+    <p class="sidebar-title">탐색</p>
+    <ul class="sidebar-links">
+      <li><a href="{{ '/' | relative_url }}">홈</a></li>
+      <li><a href="{{ '/pages/notes.html' | relative_url }}">기술노트</a></li>
+      <li><a href="{{ '/pages/posts.html' | relative_url }}">전체 글</a></li>
+      <li><a href="{{ '/pages/tags.html' | relative_url }}">태그</a></li>
+      <li><a href="{{ '/pages/about.html' | relative_url }}">소개</a></li>
+      <li><a href="{{ '/pages/search.html' | relative_url }}">검색</a></li>
+    </ul>
+
+    <p class="sidebar-title">기술노트 카테고리</p>
+    <ul class="sidebar-links sidebar-categories">
+      {% assign sorted_categories = site.categories | sort %}
+      {% for category in sorted_categories %}
+        <li>
+          <a href="{{ '/pages/notes.html#' | append: category[0] | slugify | relative_url }}">
+            {{ category[0] }}
+            <span class="count">({{ category[1] | size }})</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</aside>
