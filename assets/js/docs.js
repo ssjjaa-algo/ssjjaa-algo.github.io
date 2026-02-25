@@ -1,4 +1,25 @@
 (() => {
+  const techToggle = document.getElementById('sidebar-tech-toggle');
+  const techCategories = document.getElementById('sidebar-tech-categories');
+  const storageKey = 'sidebar-tech-expanded';
+
+  if (techToggle && techCategories) {
+    const applyExpanded = (expanded) => {
+      techToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      techCategories.hidden = !expanded;
+      localStorage.setItem(storageKey, expanded ? 'true' : 'false');
+    };
+
+    const saved = localStorage.getItem(storageKey);
+    const defaultExpanded = saved === 'true';
+    applyExpanded(defaultExpanded);
+
+    techToggle.addEventListener('click', () => {
+      const expanded = techToggle.getAttribute('aria-expanded') === 'true';
+      applyExpanded(!expanded);
+    });
+  }
+
   const content = document.querySelector('.post-content');
   if (!content) return;
 
