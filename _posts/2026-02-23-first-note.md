@@ -1,7 +1,7 @@
 ---
 title: "이진 탐색 경계 찾기 패턴"
 date: 2026-02-23 09:00:00 +0900
-categories: [알고리즘]
+categories: [Algorithm]
 tags: [이진탐색, 경계탐색, 구현패턴]
 excerpt: "단조 조건에서 first true 경계를 안정적으로 찾는 이진 탐색 템플릿을 정리합니다."
 ---
