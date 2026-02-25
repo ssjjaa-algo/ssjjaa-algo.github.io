@@ -5,19 +5,19 @@ layout: default
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="{{ '/' | relative_url }}">홈</a>
     <span aria-hidden="true">&gt;</span>
-    <a href="{{ '/pages/tech.html' | relative_url }}">Tech</a>
+    <span>Tech</span>
     {% assign primary_category = page.categories | first %}
     {% if primary_category %}
-      {% assign category_anchor = primary_category | downcase %}
+      {% assign category_path = primary_category | downcase %}
       {% if primary_category == "알고리즘" or primary_category == "Algorithm" %}
-        {% assign category_anchor = "algorithm" %}
+        {% assign category_path = "algorithm" %}
       {% elsif primary_category == "DB" %}
-        {% assign category_anchor = "db" %}
+        {% assign category_path = "db" %}
       {% elsif primary_category == "AI" %}
-        {% assign category_anchor = "ai" %}
+        {% assign category_path = "ai" %}
       {% endif %}
       <span aria-hidden="true">&gt;</span>
-      <a href="{{ '/pages/tech.html#' | append: category_anchor | relative_url }}">{{ primary_category }}</a>
+      <a href="{{ '/pages/tech/' | append: category_path | append: '.html' | relative_url }}">{{ primary_category }}</a>
     {% endif %}
     <span aria-hidden="true">&gt;</span>
     <span class="current">{{ page.title }}</span>

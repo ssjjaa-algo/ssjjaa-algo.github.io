@@ -3,12 +3,26 @@
     <p class="sidebar-title">탐색</p>
     <ul class="sidebar-links">
       <li><a href="{{ '/' | relative_url }}">홈</a></li>
-      <li><a href="{{ '/pages/tech.html' | relative_url }}">Tech</a></li>
+      <li>
+        <button
+          type="button"
+          class="sidebar-tech-toggle"
+          id="sidebar-tech-toggle"
+          aria-expanded="false"
+          aria-controls="sidebar-tech-categories"
+        >
+          Tech
+        </button>
+        <ul class="sidebar-links" id="sidebar-tech-categories" hidden>
+          <li><a href="{{ '/pages/tech/db.html' | relative_url }}">DB</a></li>
+          <li><a href="{{ '/pages/tech/ai.html' | relative_url }}">AI</a></li>
+          <li><a href="{{ '/pages/tech/algorithm.html' | relative_url }}">Algorithm</a></li>
+        </ul>
+      </li>
       <li><a href="{{ '/pages/posts.html' | relative_url }}">전체 글</a></li>
       <li><a href="{{ '/pages/tags.html' | relative_url }}">태그</a></li>
       <li><a href="{{ '/pages/about.html' | relative_url }}">소개</a></li>
       <li><a href="{{ '/pages/search.html' | relative_url }}">검색</a></li>
     </ul>
-
   </div>
 </aside>
