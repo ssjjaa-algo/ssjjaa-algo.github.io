@@ -12,6 +12,10 @@ layout: default
 
   <h1>{{ page.category_name }}</h1>
   {% assign posts_in_category = site.categories[page.category_name] %}
+  {% if posts_in_category == nil %}
+    {% assign posts_in_category = "" | split: "" %}
+  {% endif %}
+
   {% if page.category_name == "Algorithm" %}
     {% assign legacy_posts = site.categories["알고리즘"] %}
     {% if legacy_posts %}
