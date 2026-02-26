@@ -1,6 +1,10 @@
 # ssjjaa-algo.github.io
 
+<<<<<<< codex/modify-blog-based-on-jekyll-chirpy-theme
+Jekyll 블로그를 **Chirpy(remote_theme) 기반**으로 운영하는 저장소입니다.
+=======
 Jekyll 블로그를 **Chirpy 테마 기반**으로 운영하는 저장소입니다.
+>>>>>>> main
 
 ## Local development
 
@@ -17,7 +21,11 @@ bundle exec jekyll serve
 - `_posts/`: 블로그 글
 - `_tabs/`: Chirpy 상단 메뉴(Archives, Categories, Tags, About, Search)
 - `_config.yml`: 사이트 및 테마 설정
+<<<<<<< codex/modify-blog-based-on-jekyll-chirpy-theme
+- `Gemfile`: Jekyll/remote-theme 의존성
+=======
 - `Gemfile`: Jekyll/Chirpy 의존성
+>>>>>>> main
 
 ## 참고
 
