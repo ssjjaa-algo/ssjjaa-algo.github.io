@@ -8,11 +8,7 @@ timezone: Asia/Seoul
 
 # Chirpy theme
 
-<<<<<<< codex/modify-blog-based-on-jekyll-chirpy-theme
-remote_theme: cotes2020/jekyll-theme-chirpy
-=======
 theme: jekyll-theme-chirpy
->>>>>>> main
 
 social:
   name: SSJJAA
@@ -23,11 +19,7 @@ github:
 theme_mode: light
 
 plugins:
-<<<<<<< codex/modify-blog-based-on-jekyll-chirpy-theme
-  - jekyll-remote-theme
-=======
   - jekyll-theme-chirpy
->>>>>>> main
   - jekyll-feed
   - jekyll-include-cache
 
