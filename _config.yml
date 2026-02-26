@@ -1,20 +1,32 @@
 title: SSJJAA 기술 노트
+tagline: 알고리즘 · 엔지니어링 · 디버깅 기록
 description: 알고리즘, 엔지니어링, 디버깅 경험을 정리하는 기술 노트입니다.
 url: "https://ssjjaa-algo.github.io"
 baseurl: ""
-lang: ko
-markdown: kramdown
-highlighter: rouge
-permalink: /:categories/:year/:month/:day/:title/
+lang: ko-KR
 timezone: Asia/Seoul
 
-theme_mode_default: light
+# Chirpy theme
+
+theme: jekyll-theme-chirpy
+
+social:
+  name: SSJJAA
+
+github:
+  username: ssjjaa-algo
+
+theme_mode: light
 
 plugins:
+  - jekyll-theme-chirpy
   - jekyll-feed
+  - jekyll-include-cache
 
-feed:
-  path: feed.xml
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 defaults:
   - scope:
@@ -22,11 +34,14 @@ defaults:
       type: posts
     values:
       layout: post
+      comments: false
+      toc: true
   - scope:
-      path: ""
+      path: "_tabs"
+      type: tabs
     values:
-      layout: default
+      layout: page
+      permalink: /:title/
 
-collections:
-  posts:
-    output: true
+feed:
+  path: feed.xml
