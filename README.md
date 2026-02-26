@@ -1,6 +1,6 @@
 # ssjjaa-algo.github.io
 
-Jekyll 블로그를 **Chirpy 테마 기반**으로 운영하는 저장소입니다.
+Minimal Jekyll blog for technical notes with categories, tags, RSS, dark mode, and client-side search.
 
 ## Local development
 
@@ -10,15 +10,55 @@ bundle install
 bundle exec jekyll serve
 ```
 
-브라우저에서 `http://127.0.0.1:4000`를 열면 확인할 수 있습니다.
+Open `http://127.0.0.1:4000`.
 
-## 구조
+### Troubleshooting
 
-- `_posts/`: 블로그 글
-- `_tabs/`: Chirpy 상단 메뉴(Archives, Categories, Tags, About, Search)
-- `_config.yml`: 사이트 및 테마 설정
-- `Gemfile`: Jekyll/Chirpy 의존성
+If `bundle exec jekyll ...` fails with `command not found: jekyll`, it usually means the gems were not installed.
 
-## 참고
+In restricted environments where `https://rubygems.org` is blocked (for example proxy returns HTTP 403), `bundle install` cannot download Jekyll gems. In that case use `./scripts/jekyll-doctor.sh` to confirm the network issue, then run local build in a network that can reach RubyGems or rely on the GitHub Pages workflow for deployment.
 
-Chirpy의 기본 레이아웃/컴포넌트를 사용하므로, 기존 커스텀 `_layouts`, `_includes`, `assets` 파일은 필요 시에만 오버라이드 용도로 수정하세요.
+## File tree
+
+```text
+.
+├── .github/
+│   └── workflows/
+│       └── pages.yml
+├── _config.yml
+├── _includes/
+│   ├── footer.html
+│   └── header.html
+├── _layouts/
+│   ├── default.html
+│   └── post.html
+├── _posts/
+│   └── 2026-02-23-first-note.md
+├── assets/
+│   ├── css/
+│   │   └── main.css
+│   └── js/
+│       ├── search.js
+│       └── theme.js
+├── pages/
+│   ├── about.md
+│   ├── notes.md
+│   ├── posts.md
+│   ├── search.md
+│   └── tags.md
+├── Gemfile
+├── index.md
+└── search.json
+```
+
+## Features
+
+- Top navigation: Home, Notes, Tags, About, Search.
+- Notes grouped by category.
+- Tags page with linked posts by tag.
+- RSS via `jekyll-feed` (`/feed.xml`).
+- Syntax highlighting with Rouge and styled code blocks.
+- Minimal light/dark mode toggle (`localStorage` persisted).
+- Lightweight client-side search using generated `search.json`.
+- GitHub Actions workflow for Pages build and deploy.
+- `baseurl` is intentionally empty for GitHub user site deployment.
